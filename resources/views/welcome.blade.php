@@ -30,14 +30,10 @@
                 </li>
             </ul>
             
-            <a href="{{ route('login.page') }}" class="btn-default">
-                Login
-            </a>
-
-
-            <button class="btn-default">
-                Peça aqui
-            </button>
+            <div class="header-actions">
+                <a href="{{ route('login.page') }}" class="btn-default btn-primary btn-login">Login</a>
+                <button class="btn-default btn-primary btn-order">Peça aqui</button>
+            </div>
 
             <button class="hamburguer"> 
                 <i class="fa-solid fa-bars"></i> 
@@ -57,7 +53,7 @@
                 </li>
             </ul>
 
-            <button class="btn-default">
+            <button class="btn-default btn-order">
                 Peça aqui
             </button>
         </div>
