@@ -57,3 +57,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+------------------------------------------------
+
+## Manual de instalação
+
+PHP versão 8.3.30 : [PHP versão 8.3.30](https://www.php.net/downloads.php?usage=web&os=windows&osvariant=windows-downloads&version=default&source=Y)
+Composer versão 2.9.5 : https://getcomposer.org/
+PostgreSQL versão 13 : https://www.postgresql.org/download/
+Apache versão 2.4.66 : https://httpd.apache.org/download.cgi
+Git Bash versão 2.52.0 : https://gitforwindows.org/
