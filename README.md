@@ -62,8 +62,76 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Manual de instalação
 
-PHP versão 8.3.30 : [PHP versão 8.3.30](https://www.php.net/downloads.php?usage=web&os=windows&osvariant=windows-downloads&version=default&source=Y)
-Composer versão 2.9.5 : https://getcomposer.org/
-PostgreSQL versão 13 : https://www.postgresql.org/download/
-Apache versão 2.4.66 : https://httpd.apache.org/download.cgi
-Git Bash versão 2.52.0 : https://gitforwindows.org/
+1. PHP versão 8.3.30 : [Download PHP](https://www.php.net/downloads.php?usage=web&os=windows&osvariant=windows-downloads&version=default&source=Y)
+2. Composer versão 2.9.5 : [Download Composer](https://getcomposer.org/)
+3. PostgreSQL versão 13 : [Download Postgre](https://www.postgresql.org/download/)
+4. Apache versão 2.4.66 : [Download Apache](https://httpd.apache.org/download.cgi)
+5. Git Bash versão 2.52.0 : [Download Git Bash](https://gitforwindows.org/)
+
+## Configuração do Git Bash
+1. Abrir o Git Bash
+2. Digite **git config --global user.name "Seu Nome"**
+3. Digite **git config --global user.email "seuemail@exemplo.com"**
+
+## Configuração do arquivo PHP
+1. Na pasta do PHP renomeie o arquivo php.ini-development para apenas **php.ini**
+2. Abra esse arquivo no VS Code
+3. Encontre a linha **;extension_dir = "ext"** e remova o ; do inicio, deixando apenas extension_dir = "ext"
+4. Encontre a linha extension=curl e remova o ; dela
+5. Encontre a linha extension=mbstring e remova o ; dela
+6. Encontre a linha extension=openssl e remova o ; dela
+7. Encontre a linha extension=pdo_pgsql e remova o ; dela
+8. Encontre a linha extension=pgsql e remova o ; dela
+9. Salve o arquivo
+
+## Adicionar o PHP ao PATH
+1. Abra o Menu Inicial e digite **"Variáveis de ambiente"** e selecione Editar as variáveis de ambiente do sistema
+2. Clique no botão Variáveis de Ambiente
+3. Em **"Variáveis do Sistema"**, procure pela linha **Path** e clique em Editar
+4. Clique em Novo e cole o caminho da pasta onde você extraiu o PHP (exemplo: C:\xampp\php)
+5. Clique em **Ok** nas abas abertas de Variáveis de ambiente
+
+## Instalando o instalador do Laravel
+1. Utilizando o Composer digite o código **composer global require laravel/installer**
+
+## Clonando o repositório Git
+1. No terminal do Git Bash digite **git clone https://github.com/claricenunes/teste.git**
+2. Digite cd teste/ no terminal
+3. Digite code .
+
+## Projeto Laravel
+1. No Terminal do VSCode digite composer install
+2. No Terminal do VSCode digite composer update
+
+## Configurando o .env
+1. No arquivo .env
+2. Tire as # das linhas:
+
+DB_CONNECTION=pgsql
+
+DB_HOST=127.0.0.1
+
+DB_PORT=5432
+
+DB_DATABASE= seu.banco.de.dados
+
+DB_USERNAME=postgres
+
+DB_PASSWORD= sua.senha
+
+## Criar o Banco de Dados 
+1. Entrar no Postgres
+2. Abra os Servidores
+3. Selecione o seu Postgres
+4. Clique com o botão direito em Databases
+5. Clique em Create
+6. Coloque o nome do banco de dados e clique em save
+
+## Criando e alimentando as tabelas no Banco de dados
+1. Abra o terminal do VSCode
+2. Digite o código php artisan migration
+3. Digite o código php artisan db:seed
+
+## Testando o servidor
+1. No Terminal digite php artisan serve
+2. Clique Ctrl + clique no link
