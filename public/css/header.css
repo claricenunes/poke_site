@@ -1,9 +1,9 @@
 header {
     width: 100%;
     padding: 28px 8%;
-    position: sticky;
+    position: fixed;
     top : 0;
-    background-color: #fff9ea;
+    background-color: #ffc8a38c;
     z-index: 3;
 
 }

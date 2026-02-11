@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
     <link rel="stylesheet" href="{{ asset('css/testimonials.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/endereco.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/delivery.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/rodape.css') }}">
 
     {{-- CSS ESPECÍFICO DA PÁGINA --}}
     @stack('styles')
@@ -23,7 +26,7 @@
 
     {{-- HEADER --}}
     @include('partials.header')
-
+    
     {{-- CONTEÚDO PRINCIPAL --}}
     <main>
         @yield('content')

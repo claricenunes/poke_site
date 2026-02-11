@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/menu.css">
-     <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/delivery.css">
+    <link rel="stylesheet" href="css/endereco.css">
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Bowl page</title>
@@ -28,12 +31,41 @@
                 <li class="nav-item">
                     <a href="#testimonials">Avaliações</a>
                 </li>
+                <li class="nav-item">
+                    <a href="#delivery">Delivery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('endereco.page') }}" class="btn-default btn-primary btn-login">Endereço</a>
+                </li>
             </ul>
             
+
             <div class="header-actions">
-                <a href="{{ route('login.page') }}" class="btn-default btn-primary btn-login">Login</a>
-                <button class="btn-default btn-primary btn-order">Peça aqui</button>
-            </div>
+
+    @guest
+        <a href="{{ route('login.page') }}" 
+           class="btn-default btn-primary btn-login">
+           Login
+        </a>
+    @endguest
+
+    @auth
+        <button class="btn-default btn-primary btn-order">
+            Peça aqui
+        </button>
+
+        <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+            @csrf
+            <button type="submit" class="btn-default">
+                Logout
+            </button>
+        </form>
+    @endauth
+
+    
+
+</div>
+
 
             <button class="hamburguer"> 
                 <i class="fa-solid fa-bars"></i> 
@@ -50,6 +82,15 @@
                 </li>
                 <li class="nav-item">
                     <a href="testimonials">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="delivery">Delivery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="endereco">Endereço</a>
+                </li>
+                <li class="nav-item">
+                    <a href="rodape">Rodape</a>
                 </li>
             </ul>
 
@@ -245,6 +286,26 @@
                 </button>
             </div>
         </section>
+
+
+        </section id="delivery">
+            <h2 class="section-title">
+                Delivery
+            </h2>
+            <h3 class="section-subtitle">
+                Peça pelo nosso delivery e receba no conforto da sua casa!
+            </h3>
+            
+            <button class="btn-defaul">
+                    Peça na loja
+                </button>
+            <button class="btn-defaul">
+                    Peça no iFood
+            </button>
+
+
+        
+    
     </main>
 </body>
 </html>
