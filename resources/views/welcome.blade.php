@@ -102,7 +102,7 @@
 
             <button class="btn-default btn-order">
                 Peça aqui
-            </a>
+            </button>
         </div>
     </header>
 
@@ -326,7 +326,7 @@
     Peça no iFood
     </a>
 
-
+</section>
 
     <section id="rodape">
     <div class="rodape-container">

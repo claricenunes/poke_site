@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Logout;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\CardapioController;
+use App\Http\Controllers\Auth\PasswordController;
 
 use App\Http\Controllers\Auth\RegisterController as RegisterController;
 
@@ -54,3 +55,13 @@ Route::get('/esqueci minha senha', function(){
 Route::get('/cardapio-veja-mais', function () {
     return view('cardapiovejamais');
 })->name('cardapio.vejamais');
+
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+});
+
+Route::post('/forgot-password', [PasswordController::class, 'sendResetLink']);
+
+Route::get('/reset-password', [PasswordController::class, 'showResetForm']);
+
+Route::post('/reset-password', [PasswordController::class, 'resetPassword']);

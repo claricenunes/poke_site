@@ -14,3 +14,8 @@
                 Não se preocupe, vamos te ajudar a recuperar sua senha!
             </h3>
 
+
+            
+            @include('auth.forgot-password')
+
+            @include('auth.reset-password')
