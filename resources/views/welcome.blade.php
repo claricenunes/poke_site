@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="css/testimonials.css">
     <link rel="stylesheet" href="css/delivery.css">
     <link rel="stylesheet" href="css/endereco.css">
-
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cardapiovejamais.css">
+    <link rel="stylesheet" href="css/senha.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Bowl page</title>
@@ -35,7 +38,7 @@
                     <a href="#delivery">Delivery</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('endereco.page') }}" class="btn-default btn-primary btn-login">Endereço</a>
+                    <a href="{{ route('endereco.page') }}" class="btn-login">Endereço</a>
                 </li>
             </ul>
             
@@ -92,6 +95,9 @@
                 <li class="nav-item">
                     <a href="rodape">Rodape</a>
                 </li>
+                <li class="nav-item">
+                    <a href="cardapiovejamais">Veja Mais</a>
+                </li>
             </ul>
 
             <button class="btn-default btn-order">
@@ -115,9 +121,10 @@
                 </p>
 
                 <div id="cta_buttons">
-                    <a href="#" class="btn-default">
-                        Ver Cardápio
-                    </a>
+                    <a href="{{ route('cardapio.vejamais') }}" class="btn-default">
+    Ver Cardápio
+</a>
+
 
                     <a href="tel:+555555555555" id="phone_button">
                         <button class="btn-default">
@@ -128,19 +135,19 @@
                     </a>
                 </div>
 
-                <div class="social-media-buttons">
-                    <a href="">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+               <div class="social-media-buttons">
+                <a href="https://wa.me/5561999449043" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                </a>
 
-                    <a href="">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                <a href="https://www.instagram.com/claricesnunes" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                </a>
 
-                    <a href="">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </div>
+                <a href="https://www.tiktok.com/claricesnunes" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+                </a>
+</div>
             </div>
 
             <div id="banner">
@@ -165,7 +172,7 @@
                         <i class="fa-solid fa-heart"></i>
                     </div>
                     
-                    <img src="imagens/—Pngtree—japanese-inspired salmon poke bowl_19323725.png" class="dish-image" alt="">
+                    <img src="imagens/poke02.png" class="dish-image" alt="">
 
                     <h3 class="dish-title">
                         Poke Salmon
@@ -226,6 +233,11 @@
                     </div>
                 </div>
             </div>
+            <a href="{{ route('cardapio.page') }}" class="btn-default btn-ver-mais">
+    Ver mais pratos
+</a>
+
+
         </section>
 
         <section id="testimonials">
@@ -288,23 +300,65 @@
         </section>
 
 
-        </section id="delivery">
-            <h2 class="section-title">
-                Delivery
-            </h2>
-            <h3 class="section-subtitle">
-                Peça pelo nosso delivery e receba no conforto da sua casa!
-            </h3>
-            
-            <button class="btn-defaul">
-                    Peça na loja
-                </button>
-            <button class="btn-defaul">
-                    Peça no iFood
-            </button>
+      <section id="delivery">
+    <h2 class="section-title">
+        Delivery
+    </h2>
+
+    <h3 class="section-subtitle">
+        Peça pelo nosso delivery e 
+        <span>receba no conforto da sua casa!</span> 
+    </h3>
+    <img src="{{ asset('imagens/foto-ifood.jpg') }}" 
+                alt="Foto da parte"
+                class="imagem-ifood">
+    
+    <a href="https://wa.me/5511999999999" 
+   target="_blank" 
+   class="btn-default">
+    Peça na loja
+    </a>
 
 
-        
+    <a href="https://www.ifood.com.br/delivery/sua-loja-aqui" 
+   target="_blank" 
+   class="btn-default">
+    Peça no iFood
+    </a>
+
+
+
+    <section id="rodape">
+    <div class="rodape-container">
+
+        <div class="rodape-item">
+            <h3>Contato</h3>
+            <p>
+                Telefone: (61) 99876-5432 <br>
+                Email: exemplo@email.com
+            </p>
+        </div>
+
+        <div class="rodape-item">
+            <h3>Endereço</h3>
+            <p>
+                Rua Exemplo, 123 <br>
+                Cidade, Estado
+            </p>
+        </div>
+
+        <div class="rodape-item">
+            <h3>Redes Sociais</h3>
+            <p>
+                Instagram <br>
+                Whatsapp <br>
+                Tiktok
+            </p>
+        </div>
+
+    </div>
+</section>
+
     
     </main>
 </body>

@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="{{ asset('css/endereco.css') }}">
     <link rel="stylesheet" href="{{ asset('css/delivery.css') }}">
     <link rel="stylesheet" href="{{ asset('css/rodape.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset ('css/cardapiovejamais.css') }}">
+    <link rel="stylesheet" href="{{ asset ('css/senha.css') }}">
 
     {{-- CSS ESPECÍFICO DA PÁGINA --}}
     @stack('styles')
@@ -41,6 +44,7 @@
 
     {{-- JS ESPECÍFICO DA PÁGINA --}}
     @stack('scripts')
+
 
 </body>
 </html>

@@ -1,0 +1,27 @@
+#endereco {
+    padding-top: 120px;
+    margin-top: 120px;
+    min-height: 80vh;          /* melhor que height */
+    background-color: #fff9ea;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centraliza vertical */
+    align-items: center;       /* centraliza horizontal */
+    text-align: center;
+
+    padding: 60px 20px;
+
+    .imagem-loja {
+    width: 400px;
+    max-width: 90%;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+#address_info {
+    font-size: 1.2rem;   /* aumenta o texto */
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+}

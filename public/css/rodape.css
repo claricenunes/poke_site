@@ -1,0 +1,18 @@
+#rodape {
+    width: 100%;
+    background-color: #ffba9a;
+    color: white;
+    padding: 20px 0;
+}
+
+.rodape-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape-item {
+    text-align: center;
+}

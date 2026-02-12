@@ -1,0 +1,158 @@
+
+.btn-default:hover {
+    background-color: #ff8d57;
+}
+.btn-ver-mais {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: lightsalmon; /* exemplo */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    display: block;
+    margin-top: 20px; /* aumenta o espaço */
+    text-align: center;
+}
+
+#cardapio {
+    padding-top: 120px;
+    margin-top: 100px;
+    background-color: #fff9ea;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px 20px; /* pode diminuir também */
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* evita que o header fixo esconda o conteúdo */
+.categoria {
+    padding: 30px 0 60px 0;
+    scroll-margin-top: 120px; /* altura do seu header */
+}
+
+/* menu das categorias */
+.menu-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0 10px 0;
+}
+
+.menu-categorias a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.menu-categorias a:hover {
+    background-color: lightsalmon;
+    color: lightsalmon;
+}
+
+.categoria-titulo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.categoria-titulo::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: lightsalmon;
+    display: block;
+    margin: 12px auto 0 auto;
+    border-radius: 10px;
+}
+
+.dishes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+/* Overlay */
+#cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 998;
+}
+
+/* Sidebar */
+#cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#cart-sidebar.active {
+    right: 0;
+}
+
+#cart-overlay.active {
+    display: block;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#close-cart {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: lightsalmon;
+}
+
+#cart-items {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cart-footer {
+    border-top: 1px solid lightsalmon;
+    padding-top: 15px;
+}

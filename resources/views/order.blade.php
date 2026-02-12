@@ -2,7 +2,9 @@
 
 @section('title', 'Peça aqui | Bowl')
 
+use app\Models\produto;
 @section('content')
+
     <div class="order-page">
         <h1>Peça aqui</h1>
 
@@ -62,5 +64,7 @@
         });
     });
     </script>
+    $produtos = \Illuminate\Support\Facades\DB::table('produtos')->get();
+    
     @endpush
 @endsection

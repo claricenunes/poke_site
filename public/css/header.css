@@ -46,6 +46,36 @@ header {
     display: none; 
 }
 
+/* Menu centralizado */
+.nav-center {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.cart-btn {
+    background-color: lightsalmon;
+    color: white;
+    position: absolute;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    display: flex;
+    
+    
+}
+
+.cart-btn:hover {
+    background-color: #ff8d57;
+}
+
 @media screen and (max-width: 1170px) {
     #nav_list,
     #navbar .btn-default {

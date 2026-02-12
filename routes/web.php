@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Logout;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\CardapioController;
 
 use App\Http\Controllers\Auth\RegisterController as RegisterController;
 
@@ -39,3 +40,17 @@ Route::get('/endereco', function(){
 
 Route::post('/logout', [LogoutController::class, 'logout'])
     ->name('logout');
+
+Route::get('/cardapio', function(){
+   return view('cardapiovejamais');
+})
+->name('cardapio.page');
+
+Route::get('/esqueci minha senha', function(){
+   return view('senha');
+})
+->name('senha.page');
+
+Route::get('/cardapio-veja-mais', function () {
+    return view('cardapiovejamais');
+})->name('cardapio.vejamais');

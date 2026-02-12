@@ -17,12 +17,26 @@
                 <label for="password">Senha</label>
                 <input id="password" class="form-input" type="password" name="password" placeholder="••••••••">
             </div>
+             </form>
 
-            <button type="submit" class="btn-default btn-primary">Entrar</button>
-        </form>
+        <div class="buttons">
+    <button type="submit" class="btn-default btn-primary">
+        Entrar
+    </button>
+</div>
+</form>
 
-        <a href="{{ route('register.page') }}" class="btn-register">
-            Registrar
-        </a>
+<div class="buttons">
+    <a href="{{ route('register.page') }}" class="btn-register">
+        Registrar
+    </a>
+</div>
+
+<div class="buttons">
+    <a href="{{ route('senha.page') }}" class="btn-register">
+        Esqueci minha senha
+    </a>
+</div>
+
     </div>
 @endsection
