@@ -293,9 +293,9 @@
                     </div>
                 </div>
 
-                <button class="btn-defaul">
-                    Ver mais avaliações
-                </button>
+                <a href="{{ route('avaliacoes.page') }}" class="btn-default btn-ver-mais">
+    Ver mais avaliações
+</a>
             </div>
         </section>
 
@@ -350,9 +350,19 @@
         <div class="rodape-item">
             <h3>Redes Sociais</h3>
             <p>
-                Instagram <br>
-                Whatsapp <br>
-                Tiktok
+               <div class="social-media-buttons">
+                <a href="https://wa.me/5561999449043" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="https://www.instagram.com/claricesnunes" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/claricesnunes" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+                </a>
+</div>
             </p>
         </div>
 

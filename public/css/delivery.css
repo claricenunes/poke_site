@@ -33,3 +33,7 @@ body {
     color: #1d1d1d;
     margin: 0;
 }
+.btn-default {
+    text-decoration: none; /* remove sublinhado */
+    color: white; /* define cor do texto */
+}
