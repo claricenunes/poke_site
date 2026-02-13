@@ -32,7 +32,8 @@ class PasswordController extends Controller
             'reset_token_expiry' => Carbon::now()->addHour()
         ]);
 
-        $link = url('/reset-password?token=' . $token);
+        $link = url('/reset-password/' . $token);
+
 
         Mail::raw("Clique no link para redefinir sua senha:\n\n$link", function ($message) use ($user) {
             $message->to($user->email)
@@ -43,13 +44,12 @@ class PasswordController extends Controller
     }
 
     // 🔹 Tela de reset
-    public function showResetForm(Request $request)
-    {
-        return view('auth.reset-password', [
-            $request->query('token')
-
-        ]);
-    }
+ public function showResetForm($token)
+{
+    return view('auth.reset-password', [
+        'token' => $token
+    ]);
+}
 
     // 🔹 Atualizar senha
     public function resetPassword(Request $request)

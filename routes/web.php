@@ -62,7 +62,8 @@ Route::get('/forgot-password', function () {
 
 Route::post('/forgot-password', [PasswordController::class, 'sendResetLink']);
 
-Route::get('/reset-password', [PasswordController::class, 'showResetForm']);
+Route::get('/reset-password/{token}', [PasswordController::class, 'showResetForm']);
+
 
 Route::post('/reset-password', [PasswordController::class, 'resetPassword']);
 
@@ -70,3 +71,7 @@ Route::get('/mais-avaliacoes', function(){
    return view('maisavaliacoes');
 })
 ->name('avaliacoes.page');
+
+Route::get('/reset-password/{token}', function ($token) {
+    return view('auth.reset-password', ['token' => $token]);
+});

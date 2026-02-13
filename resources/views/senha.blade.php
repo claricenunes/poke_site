@@ -17,5 +17,3 @@
 
             
             @include('auth.forgot-password')
-
-            @include('auth.reset-password')
