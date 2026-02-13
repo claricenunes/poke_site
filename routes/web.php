@@ -75,3 +75,8 @@ Route::get('/mais-avaliacoes', function(){
 Route::get('/reset-password/{token}', function ($token) {
     return view('auth.reset-password', ['token' => $token]);
 });
+
+Route::get('/welcome', function(){
+   return view('welcome');
+})
+->name('welcome.page');

@@ -6,8 +6,8 @@
     <div class="login-form">
         <h1>Página de Login</h1>
 
-        <form method="POST" action="{{ route('login.process') }}">
-            @csrf
+        <form action="/login" method="POST">
+    @csrf
             <div class="form-group">
                 <label for="email">Email</label>
                 <input id="email" class="form-input" type="email" name="email" placeholder="seu@email.com">
@@ -18,6 +18,7 @@
                 <input id="password" class="form-input" type="password" name="password" placeholder="••••••••">
             </div>
              </form>
+
 
         <div class="buttons">
     <button type="submit" class="btn-default btn-primary">
