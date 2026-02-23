@@ -95,7 +95,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 1. Utilizando o Composer digite o código **composer global require laravel/installer**
 
 ## Clonando o repositório Git
-1. No terminal do Git Bash digite **git clone https://github.com/claricenunes/teste.git**
+1. No terminal do Git Bash digite **git clone https://github.com/claricenunes/poke_site.git**
 2. Digite cd teste/ no terminal
 3. Digite code .
 
