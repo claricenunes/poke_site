@@ -96,7 +96,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Clonando o repositório Git
 1. No terminal do Git Bash digite **git clone https://github.com/claricenunes/poke_site.git**
-2. Digite cd teste/ no terminal
+2. Digite cd poke_site/ no terminal
 3. Digite code .
 
 ## Projeto Laravel
