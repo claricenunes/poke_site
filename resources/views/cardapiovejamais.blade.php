@@ -16,26 +16,23 @@
 </section>
 
 
-<!-- ================= COMIDAS ================= -->
 <section id="comidas" class="categoria">
 
     <h2 class="categoria-titulo">Comidas</h2>
 
+    <div class="dishes">
 
-   <div id="dishes">
-
-
-
+        <!-- PRATO 1 -->
         <div class="dish">
             <div class="dish-heart">
                 <i class="fa-solid fa-heart"></i>
             </div>
             
-            <img src="{{ asset('imagens/poke02.png') }}" class="dish-image" alt="Poke Salmon">
+            <img src="{{ asset('imagens/poke02.png') }}" 
+                 class="dish-image" 
+                 alt="Poke Salmon">
 
-            <h3 class="dish-title">
-                Poke Salmon
-            </h3>
+            <h3 class="dish-title">Poke Salmon</h3>
 
             <span class="dish-description">
                 Prato de salmão e ingredientes escolhidos por você!
@@ -58,49 +55,52 @@
             </div>
         </div>
 
+
+        <!-- PRATO 2 -->
         <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    
-                    <img src="imagens/deliciosa-tigela-de-salmao-com-manga-pepino-e-arroz.png" class="dish-image" alt="">
-
-                    <h3 class="dish-title">
-                        Poke Manga & Salmão
-                    </h3>
-
-                    <span class="dish-description">
-                        Prato de manga com salmão, para refrescar seu dia!
-                    </span>
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4>R$45,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
+            <div class="dish-heart">
+                <i class="fa-solid fa-heart"></i>
             </div>
-            <div class="dish">
+                    
+            <img src="{{ asset('imagens/deliciosa-tigela-de-salmao-com-manga-pepino-e-arroz.png') }}" 
+                 class="dish-image" 
+                 alt="Poke Manga & Salmão">
+
+            <h3 class="dish-title">Poke Manga & Salmão</h3>
+
+            <span class="dish-description">
+                Prato de manga com salmão, para refrescar seu dia!
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(500+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$45,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- PRATO 3 -->
+        <div class="dish">
             <div class="dish-heart">
                 <i class="fa-solid fa-heart"></i>
             </div>
             
-            <img src="{{ asset('imagens/poke01.png') }}" class="dish-image" alt="Poke Salmon">
+            <img src="{{ asset('imagens/poke01.png') }}" 
+                 class="dish-image" 
+                 alt="Poke Tropicalle">
 
-            <h3 class="dish-title">
-                Poke Tropicalle
-            </h3>
+            <h3 class="dish-title">Poke Tropicalle</h3>
 
             <span class="dish-description">
                 Prato Tropical, repleto de sabores!
@@ -122,6 +122,42 @@
                 </button>
             </div>
         </div>
+
+
+        <!-- PRATO 4 -->
+        <div class="dish">
+            <div class="dish-heart">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            
+            <img src="{{ asset('imagens/poke01.png') }}" 
+                 class="dish-image" 
+                 alt="Poke Especial">
+
+            <h3 class="dish-title">Poke Especial</h3>
+
+            <span class="dish-description">
+                Combinação especial da casa.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(500+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$45,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
+    </div> <!-- FECHA dishes -->
 
 </section>
 
