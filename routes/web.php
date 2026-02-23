@@ -6,8 +6,9 @@ use App\Http\Controllers\Logout;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\CardapioController;
 use App\Http\Controllers\Auth\PasswordController;
-
 use App\Http\Controllers\Auth\RegisterController as RegisterController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -62,7 +63,7 @@ Route::get('/forgot-password', function () {
 
 Route::post('/forgot-password', [PasswordController::class, 'sendResetLink']);
 
-Route::get('/reset-password/{token}', [PasswordController::class, 'showResetForm']);
+Route::get('/reset-password', [PasswordController::class, 'showResetForm']);
 
 
 Route::post('/reset-password', [PasswordController::class, 'resetPassword']);
@@ -72,11 +73,17 @@ Route::get('/mais-avaliacoes', function(){
 })
 ->name('avaliacoes.page');
 
-Route::get('/reset-password/{token}', function ($token) {
-    return view('auth.reset-password', ['token' => $token]);
-});
+
 
 Route::get('/welcome', function(){
    return view('welcome');
 })
 ->name('welcome.page');
+
+
+
+Route::get('forgot-password', [ForgotPasswordController::class, 'showForm'])
+    ->name('password.request');
+
+Route::post('forgot-password', [ForgotPasswordController::class, 'submitForm'])
+    ->name('password.email'); // essa rota é usada no form

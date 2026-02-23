@@ -12,7 +12,7 @@ use Carbon\Carbon;
 
 class PasswordController extends Controller
 {
-    // 🔹 Enviar email com token
+    // 🔹 Enviar email com código de recuperação
     public function sendResetLink(Request $request)
     {
         $request->validate([
@@ -22,48 +22,46 @@ class PasswordController extends Controller
         $user = User::where('email', $request->email)->first();
 
         if (!$user) {
-            return back()->with('error', 'Se o email existir, enviaremos o link.');
+            return back()->with('error', 'Se o email existir, enviaremos o código.');
         }
 
-        $token = Str::random(64);
+        $code = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
         $user->update([
-            'reset_token' => $token,
+            'reset_token' => $code,
             'reset_token_expiry' => Carbon::now()->addHour()
         ]);
 
-        $link = url('/reset-password/' . $token);
-
-
-        Mail::raw("Clique no link para redefinir sua senha:\n\n$link", function ($message) use ($user) {
+        Mail::raw("Seu código de recuperação de senha é: $code\n\nEste código expira em 1 hora.", function ($message) use ($user) {
             $message->to($user->email)
-                    ->subject('Recuperação de Senha');
+                    ->subject('Código de Recuperação de Senha');
         });
 
-        return back()->with('success', 'Se o email existir, enviaremos o link.');
+        return back()->with('success', 'Se o email existir, enviaremos o código.');
     }
 
     // 🔹 Tela de reset
- public function showResetForm($token)
+ public function showResetForm()
 {
-    return view('auth.reset-password', [
-        'token' => $token
-    ]);
+    return view('auth.reset-password');
 }
 
     // 🔹 Atualizar senha
     public function resetPassword(Request $request)
     {
         $request->validate([
+            'email' => 'required|email',
+            'code' => 'required|string|size:6',
             'password' => 'required|min:6|confirmed'
         ]);
 
-        $user = User::where('reset_token', $request->token)
+        $user = User::where('email', $request->email)
+                    ->where('reset_token', $request->code)
                     ->where('reset_token_expiry', '>', Carbon::now())
                     ->first();
 
         if (!$user) {
-            return back()->with('error', 'Token inválido ou expirado.');
+            return back()->with('error', 'Código inválido, expirado ou email incorreto.');
         }
 
         $user->update([

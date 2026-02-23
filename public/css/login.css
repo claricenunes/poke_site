@@ -3,16 +3,52 @@ body {
 }
 
 .login-form {
-    min-height: calc(70vh - 120px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 15px; /* espaço entre elementos do formulário */
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* fundo leve */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.login-form input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-form input[type="email"]:focus {
+    border-color: lightsalmon;
+    box-shadow: 0 0 5px rgb(255, 163, 88); /* cor laranja */
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 1px; /* diminui a distância entre os botões */
+    flex-wrap: wrap; /* permite quebrar linha se a tela for pequena */
+    margin-top: 10px; /* reduz a distância para o input */
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: lightsalmon;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+.buttons button:hover {
+    background-color: rgb(240, 139, 99);
 }
