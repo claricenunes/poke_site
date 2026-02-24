@@ -1,3 +1,15 @@
+@media (max-width: 900px) {
+    .dishes .dish {
+        flex: 0 0 calc(50% - 12px); /* 2 cards por linha em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .dishes .dish {
+        flex: 0 0 100%; /* 1 card por linha em celulares */
+    }
+}
+
 
 .btn-default:hover {
     background-color: #ff8d57;
@@ -90,6 +102,9 @@ html {
   margin-top: 32px;
   flex-wrap: wrap;
 }
+
+
+
 
 /* Overlay */
 #cart-overlay {

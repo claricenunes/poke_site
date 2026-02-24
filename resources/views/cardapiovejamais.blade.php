@@ -89,12 +89,41 @@
             </div>
         </div>
 
-
         <!-- PRATO 3 -->
         <div class="dish">
             <div class="dish-heart">
                 <i class="fa-solid fa-heart"></i>
             </div>
+            
+            <img src="{{ asset('imagens/poke04.png') }}" 
+                 class="dish-image" 
+                 alt="Poke Especial">
+
+            <h3 class="dish-title">Poke Especial</h3>
+
+            <span class="dish-description">
+                Combinação especial da casa.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(500+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$47,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- PRATO 4 -->
+        <div class="dish">
             
             <img src="{{ asset('imagens/poke01.png') }}" 
                  class="dish-image" 
@@ -124,20 +153,19 @@
         </div>
 
 
-        <!-- PRATO 4 -->
+
+        <!-- PRATO 5 -->
         <div class="dish">
-            <div class="dish-heart">
-                <i class="fa-solid fa-heart"></i>
-            </div>
+        
             
-            <img src="{{ asset('imagens/poke01.png') }}" 
+            <img src="{{ asset('imagens/poke05.png') }}" 
                  class="dish-image" 
                  alt="Poke Especial">
 
-            <h3 class="dish-title">Poke Especial</h3>
+            <h3 class="dish-title">Poke Health</h3>
 
             <span class="dish-description">
-                Combinação especial da casa.
+                Prato com a combinação perfeita para aqueles que não querem sair da dieta!
             </span>
 
             <div class="dish-rate">
@@ -150,7 +178,39 @@
             </div>
 
             <div class="dish-price">
-                <h4>R$45,00</h4>
+                <h4>R$50,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+        <!-- PRATO 6 -->
+        <div class="dish">
+            <div class="dish-heart">
+                <i class="fa-solid fa-plate-wheat"></i>
+            </div>
+            
+            <img src="{{ asset('imagens/poke06.png') }}" 
+                 class="dish-image" 
+                 alt="Poke Hawaii">
+
+            <h3 class="dish-title">Poke Cream</h3>
+
+            <span class="dish-description">
+                Poke saboroso e tropical, para os amantes de sabores intensos.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(500+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$50,00</h4>
                 <button class="btn-default">
                     <i class="fa-solid fa-basket-shopping"></i>
                 </button>
@@ -165,7 +225,7 @@
 <section id="bebidas" class="categoria">
     <h2 class="categoria-titulo">Bebidas</h2>
 
-    <div id="dishes">
+    <div class="dishes">
 
 
         <div class="dish">
@@ -202,6 +262,105 @@
             </div>
         </div>
 
+
+        <div class="dish">
+            <div class="dish-heart">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            
+            <img src="{{ asset('imagens/sucomaracuja.png') }}" 
+                 class="dish-image" 
+                 alt="Bebida">
+
+            <h3 class="dish-title">
+                Suco Strawberry
+            </h3>
+
+            <span class="dish-description">
+                Bebida doce e refrescante, feita com morangos frescos.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(320+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$14,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="dish">
+
+            
+            <img src="{{ asset('imagens/sucomaracuja.png') }}" 
+                 class="dish-image" 
+                 alt="Bebida">
+
+            <h3 class="dish-title">
+                Suco Laranja
+            </h3>
+
+            <span class="dish-description">
+                Suco de laranja natural, perfeito para acompanhar seu poke.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(320+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$10,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="dish">
+
+            
+            <img src="{{ asset('imagens/sucomaracuja.png') }}" 
+                 class="dish-image" 
+                 alt="Bebida">
+
+            <h3 class="dish-title">
+                Suco Lemonade
+            </h3>
+
+            <span class="dish-description">
+                Limonada perfeita, feita com limões frescos e um toque de hortelã.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(320+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$12,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -214,8 +373,42 @@
 <section id="sobremesas" class="categoria">
     <h2 class="categoria-titulo">Sobremesas</h2>
 
-    <div id="dishes">
+    <div class="dishes">
 
+
+        <div class="dish">
+            <div class="dish-heart">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            
+            <img src="{{ asset('imagens/brownie.png') }}" 
+                 class="dish-image" 
+                 alt="Sobremesa">
+
+            <h3 class="dish-title">
+                Creamcheese de Morango
+            </h3>
+
+            <span class="dish-description">
+                A sobremesa perfeita para os amantes de morango, com uma camada cremosa de creamcheese e uma cobertura de morangos frescos.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(210+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$30,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>    
 
         <div class="dish">
             <div class="dish-heart">
@@ -250,6 +443,71 @@
                 </button>
             </div>
         </div>
+
+         <div class="dish">
+        
+            
+            <img src="{{ asset('imagens/brownie.png') }}" 
+                 class="dish-image" 
+                 alt="Sobremesa">
+
+            <h3 class="dish-title">
+                Sorvete de Baunilha
+            </h3>
+
+            <span class="dish-description">
+                Sorvete cremoso de baunilha, perfeito como sobremesa.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(210+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$14,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="dish">
+            
+            
+            <img src="{{ asset('imagens/brownie.png') }}" 
+                 class="dish-image" 
+                 alt="Sobremesa">
+
+            <h3 class="dish-title">
+                Mousse de Maracujá
+            </h3>
+
+            <span class="dish-description">
+                Mousse cremosa de maracujá, com o equilíbrio perfeito entre doce e azedo.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(210+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$18,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
 
     </div>
 </section>
