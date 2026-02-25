@@ -58,7 +58,7 @@
                     </div>
                     
                                         <div class="feedbacks">
-                        <img src="public/imagens/homem-cabelo-castanho.jpg" id="feedback-avatar" alt="">
+                        <img src="{{ asset('imagens/usuario.png') }}" id="feedback-avatar" alt="">
                          
                         <div class="feedback-content">
                             <p>
@@ -79,7 +79,7 @@
                 </div>
                 
                                         <div class="feedbacks">
-                        <img src="public/imagens/menine-ideia.png" id="feedback-avatar" alt="">
+                        <img src="{{ asset('imagens/usuario.png') }}" id="feedback-avatar" alt="">
                          
                         <div class="feedback-content">
                             <p>

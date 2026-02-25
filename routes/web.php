@@ -61,7 +61,7 @@ Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 });
 
-Route::post('/forgot-password', [PasswordController::class, 'sendResetLink']);
+
 
 Route::get('/reset-password', [PasswordController::class, 'showResetForm']);
 
@@ -82,8 +82,19 @@ Route::get('/welcome', function(){
 
 
 
-Route::get('forgot-password', [ForgotPasswordController::class, 'showForm'])
-    ->name('password.request');
+// Mostrar formulário de email
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+})->name('password.request');
 
-Route::post('forgot-password', [ForgotPasswordController::class, 'submitForm'])
-    ->name('password.email'); // essa rota é usada no form
+// Enviar email com token
+Route::post('/forgot-password', [PasswordController::class, 'sendResetLink'])
+    ->name('password.email');
+
+// Mostrar formulário de nova senha
+Route::get('/reset-password/{token}', [PasswordController::class, 'showResetForm'])
+    ->name('password.reset');
+
+// Atualizar senha
+Route::post('/reset-password', [PasswordController::class, 'resetPassword'])
+    ->name('password.update');
