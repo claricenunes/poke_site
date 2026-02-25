@@ -268,7 +268,7 @@
                 <i class="fa-solid fa-heart"></i>
             </div>
             
-            <img src="{{ asset('imagens/sucomaracuja.png') }}" 
+            <img src="{{ asset('imagens/suco02.png') }}" 
                  class="dish-image" 
                  alt="Bebida">
 
@@ -300,7 +300,7 @@
         <div class="dish">
 
             
-            <img src="{{ asset('imagens/sucomaracuja.png') }}" 
+            <img src="{{ asset('imagens/suco03.png') }}" 
                  class="dish-image" 
                  alt="Bebida">
 
@@ -332,7 +332,7 @@
         <div class="dish">
 
             
-            <img src="{{ asset('imagens/sucomaracuja.png') }}" 
+            <img src="{{ asset('imagens/suco04.png') }}" 
                  class="dish-image" 
                  alt="Bebida">
 
@@ -373,42 +373,7 @@
 <section id="sobremesas" class="categoria">
     <h2 class="categoria-titulo">Sobremesas</h2>
 
-    <div class="dishes">
-
-
-        <div class="dish">
-            <div class="dish-heart">
-                <i class="fa-solid fa-heart"></i>
-            </div>
-            
-            <img src="{{ asset('imagens/brownie.png') }}" 
-                 class="dish-image" 
-                 alt="Sobremesa">
-
-            <h3 class="dish-title">
-                Creamcheese de Morango
-            </h3>
-
-            <span class="dish-description">
-                A sobremesa perfeita para os amantes de morango, com uma camada cremosa de creamcheese e uma cobertura de morangos frescos.
-            </span>
-
-            <div class="dish-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <span>(210+)</span>
-            </div>
-
-            <div class="dish-price">
-                <h4>R$30,00</h4>
-                <button class="btn-default">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </button>
-            </div>
-        </div>    
+    <div class="dishes">    
 
         <div class="dish">
             <div class="dish-heart">
@@ -437,7 +402,7 @@
             </div>
 
             <div class="dish-price">
-                <h4>R$18,00</h4>
+                <h4>R$13,00</h4>
                 <button class="btn-default">
                     <i class="fa-solid fa-basket-shopping"></i>
                 </button>
@@ -447,7 +412,7 @@
          <div class="dish">
         
             
-            <img src="{{ asset('imagens/brownie.png') }}" 
+            <img src="{{ asset('imagens/sorvete_baunilha.png') }}" 
                  class="dish-image" 
                  alt="Sobremesa">
 
@@ -477,18 +442,21 @@
         </div>
 
         <div class="dish">
+            <div class="dish-heart">
+                <i class="fa-solid fa-heart"></i>
+            </div>
             
             
-            <img src="{{ asset('imagens/brownie.png') }}" 
+            <img src="{{ asset('imagens/cheesecake.png') }}" 
                  class="dish-image" 
                  alt="Sobremesa">
 
             <h3 class="dish-title">
-                Mousse de Maracujá
+                Cheesecake de Morango
             </h3>
 
             <span class="dish-description">
-                Mousse cremosa de maracujá, com o equilíbrio perfeito entre doce e azedo.
+                Cheesecake cremosa de morango, com uma base crocante e recheio saboroso.
             </span>
 
             <div class="dish-rate">
@@ -502,6 +470,73 @@
 
             <div class="dish-price">
                 <h4>R$18,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="dish">
+            <div class="dish-heart">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            
+            
+            <img src="{{ asset('imagens/tiramisu.png') }}" 
+                 class="dish-image" 
+                 alt="Sobremesa">
+
+            <h3 class="dish-title">
+                Tiramisu
+            </h3>
+
+            <span class="dish-description">
+                Tiramisu cremoso e saboroso, com camadas de biscoito e creme de mascarpone.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(210+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$18,00</h4>
+                <button class="btn-default">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="dish">
+            
+            <img src="{{ asset('imagens/acai_bowl.png') }}" 
+                 class="dish-image" 
+                 alt="Sobremesa">
+
+            <h3 class="dish-title">
+                Açaí Bowl
+            </h3>
+
+            <span class="dish-description">
+                A sobremesa perfeita para os amantes de açaí, com uma camada recheada de frutas frescas.
+            </span>
+
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(210+)</span>
+            </div>
+
+            <div class="dish-price">
+                <h4>R$30,00</h4>
                 <button class="btn-default">
                     <i class="fa-solid fa-basket-shopping"></i>
                 </button>
