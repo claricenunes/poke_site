@@ -7,7 +7,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\CardapioController;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\RegisterController as RegisterController;
-use App\Http\Controllers\Auth\ForgotPasswordController;
+
 
 
 Route::get('/', function () {
@@ -80,9 +80,6 @@ Route::get('/welcome', function(){
 })
 ->name('welcome.page');
 
-
-
-// Mostrar formulário de email
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->name('password.request');

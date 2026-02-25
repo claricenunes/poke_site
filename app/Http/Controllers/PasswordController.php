@@ -12,10 +12,33 @@ use Carbon\Carbon;
 
 class PasswordController extends Controller
 {
+    // 🔹 Enviar email com token
     public function sendResetLink(Request $request)
 {
-    dd($request->all());
-}
+    dd("entrei no método");
+
+        $user = User::where('email', $request->email)->first();
+
+        if (!$user) {
+            return back()->with('success', 'Se o email existir, enviaremos o link.');
+        }
+
+        $token = Str::random(64);
+
+        $user->update([
+            'reset_token' => $token,
+            'reset_token_expiry' => Carbon::now()->addHour()
+        ]);
+
+        $link = url('/reset-password/' . $token);
+
+        Mail::raw("Clique no link para redefinir sua senha:\n\n$link", function ($message) use ($user) {
+            $message->to($user->email)
+                    ->subject('Recuperação de Senha');
+        });
+
+        return back()->with('success', 'Se o email existir, enviaremos o link.');
+    }
 
     // 🔹 Mostrar tela de reset
     public function showResetForm($token)
