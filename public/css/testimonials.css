@@ -6,6 +6,72 @@
     gap : 48px;
 }
 
+.titulo-avaliacoes{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+.avaliacao-media{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avaliacao-media h2{
+    font-size: 2.5rem;
+    color: lightsalmon;
+}
+
+.linha-estrela{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:5px 0;
+}
+
+.barra{
+    width:200px;
+    height:8px;
+    background:#eee;
+    border-radius:5px;
+    align-items:center ;
+}
+
+.progresso{
+    height:8px;
+    background:lightsalmon;
+    border-radius:5px;
+    align-items: center;
+}
+.distribuicao-estrelas{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:20px 0;
+}
+
+.galeria-clientes{
+    display: flex;
+    justify-content: center; /* centraliza na página */
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.galeria-clientes img{
+    width: 180px;       /* tamanho da foto */
+    height: 320px;      /* proporção aproximada 9:16 */
+    object-fit: cover;  /* corta a imagem sem distorcer */
+    border-radius: 12px;
+}
+
+.destaque{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
 #testimonial_chef {
     width: 500px;
     height: auto;
@@ -30,8 +96,8 @@
 
 
 #feedback-avatar {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
   position: relative;
@@ -39,6 +105,12 @@
   z-index: 1;
 }
 
+#foto-avaliacao {
+    max-width: 180px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
 
 #feedback-avatar::before {
   content: "";
@@ -58,8 +130,11 @@
 
 #testimonials_content {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
 }
-
 #feedbacks {
     display: flex;
     flex-direction: column;
@@ -78,12 +153,19 @@
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
 }
 
-.feedback-content p {
-    justify-content: space-between; 
+.feedback-content {
     display: flex;
-    align-items: center;           
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 8px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feedback-content p {
     margin: 0;
-    color: black;
 }
 
 .feedback-content p span {
