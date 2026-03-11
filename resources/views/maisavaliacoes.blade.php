@@ -40,7 +40,7 @@
 
 
 <div class="avaliacao-destaque-titulo">
-    <h3>⭐ Avaliação em destaque</h3>
+    <h3>Avaliações em destaque</h3>
 </div>
 
 <div class="avaliacoes-destaque-container">
