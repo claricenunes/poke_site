@@ -50,30 +50,84 @@
     margin:20px 0;
 }
 
-.galeria-clientes{
-    display: flex;
-    justify-content: center; /* centraliza na página */
-    gap: 20px;
-    flex-wrap: wrap;
+
+.filtros {
+    display: flex;             /* deixa os botões em linha */
+    justify-content: center;   /* centraliza horizontalmente */
+    gap: 10px;                 /* espaço entre os botões */
+    margin: 20px 0;            /* espaço acima e abaixo do bloco */
+}
+
+/* Container da seção de destaque */
+.avaliacao-destaque-titulo {
+    text-align: center;           /* centraliza o título */
+    margin: 40px 0 20px 0;        /* espaçamento acima e abaixo */
+    font-size: 1.8rem;
+}
+
+/* Container das avaliações em destaque */
+.avaliacoes-destaque-container {
+    display: flex;               /* coloca os feedbacks lado a lado */
+    flex-wrap: wrap;             /* quebra linha se a tela for pequena */
+    gap: 20px;                   /* espaço entre cada avaliação */
+    justify-content: center;     /* centraliza no meio da página */
     margin: 40px 0;
 }
 
-.galeria-clientes img{
-    width: 180px;       /* tamanho da foto */
-    height: 320px;      /* proporção aproximada 9:16 */
-    object-fit: cover;  /* corta a imagem sem distorcer */
+/* Cada avaliação individual */
+.avaliacao-destaque {
+    display: flex;               /* avatar + box de conteúdo lado a lado */
+    align-items: flex-start;     
+    gap: 20px;                   /* espaço entre avatar e conteúdo */
+    flex: 1 1 300px;             /* largura mínima 300px, cresce se houver espaço */
+    max-width: 500px;            /* não fica gigante */
+}
+
+/* Avatar do cliente */
+#feedback-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+#feedback-avatar::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top left, #ff7a7a, #7ad3ff);
+    left: -5px;
+    top: -5px;
+    z-index: 0;
+}
+
+/* Box de conteúdo da avaliação */
+.feedback-content {
+    display: flex;
+    flex-direction: column;      /* texto empilhado verticalmente */
+    gap: 8px;
+    background-color: #fff;
     border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.destaque{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
+/* Foto do poke dentro da mensagem */
+#foto-avaliacao {
+    width: 120px;               /* tamanho compacto */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 8px;
+    align-self: flex-start;     
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-
 #testimonial_chef {
-    width: 500px;
+    width: 650px;
     height: auto;
 }
 

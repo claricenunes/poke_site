@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/cardapiovejamais.css">
     <link rel="stylesheet" href="css/senha.css">
+    <link rel="stylesheet" href="css/maisavaliacoes.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Bowl page</title>
@@ -252,7 +253,7 @@
 
                 <div id="feedbacks">
                     <div class="feedbacks">
-                        <img src="imagens/retrato-de-uma-jovem-mulher-bonita-olhando-e-sorrindo.png" id="feedback-avatar" alt="">
+                        <img src="imagens/pessoa05.jpg" id="feedback-avatar" alt="">
                          
                         <div class="feedback-content">
                             <p>
@@ -272,7 +273,7 @@
                     </div>
 
                                         <div class="feedbacks">
-                        <img src="imagens/a-cintura-para-cima-de-um-homem-bonito-confiante-alegre-empreendedor-com-um-grande-sorriso.png" id="feedback-avatar" alt="">
+                        <img src="imagens/pessoa04.jpg" id="feedback-avatar" alt="">
                          
                         <div class="feedback-content">
                             <p>

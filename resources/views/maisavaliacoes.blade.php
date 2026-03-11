@@ -13,7 +13,6 @@
     </div>
 
 
-<!-- seção de avaliações gerais  -->
     <div class="avaliacao-media">
         <h2>⭐ 4.8 / 5</h2>
         <p>Baseado em 127 avaliações</p>
@@ -37,58 +36,56 @@
     </div>
 
 
-<!-- galeria de fotos dos clientes  -->
 
-    <div class="galeria-clientes">
 
-    <div class="foto-cliente">
-        <img src="{{ asset('imagens/avaliacao01.jfif') }}">
-        <p>Natália Lima</p>
+
+<div class="avaliacao-destaque-titulo">
+    <h3>⭐ Avaliação em destaque</h3>
+</div>
+
+<div class="avaliacoes-destaque-container">
+    
+
+    <div class="avaliacao-destaque">
+        <img src="{{ asset('imagens/pessoa06.jpg') }}" id="feedback-avatar" alt="Foto do cliente">
+
+        <div class="feedback-content">
+            <p>Maria Silva ⭐⭐⭐⭐⭐</p>
+            <p>Melhor poke que já comi! Ingredientes frescos e atendimento incrível.</p>
+            <img src="{{ asset('imagens/poke07.webp') }}" id="foto-avaliacao" alt="Foto da avaliação do poke">
+        </div>
     </div>
 
-    <div class="foto-cliente">
-        <img src="{{ asset('imagens/avaliacao02.jfif') }}">
-        <p>João Pedro</p>
+    <div class="avaliacao-destaque">
+        <img src="{{ asset('imagens/pessoa07.png') }}" id="feedback-avatar" alt="Foto do cliente">
+
+        <div class="feedback-content">
+            <p>Pedro Henrique ⭐⭐⭐⭐⭐</p>
+            <p>O lugar preferido da minha esposa, comida saborosa, ótimo atendimento além da localização impecável!</p>
+            <img src="{{ asset('imagens/poke08.webp') }}" id="foto-avaliacao" alt="Foto da avaliação do poke">
+        </div>
     </div>
 
-    <div class="foto-cliente">
-        <img src="{{ asset('imagens/avaliacao03.jfif') }}">
-        <p>Ana Clara</p>
-    </div>
+</div>
 
+<div class="avaliacao-destaque-titulo">
+    <h3>Filtro de Busca</h3>
+</div>
 
+<div>
+    <!-- deixe no centro -->
     <div class="filtros">
 
     <button class="btn">Todas</button>
     <button class="btn">5 ⭐</button>
     <button class="btn">4 ⭐</button>
     <button class="btn">Com foto</button>
-
     </div>
+
+</div>
 
 <!-- formulário de avaliação -->  
 
-
-<!-- seção de avaliações em destaque  -->
-    <div class="avaliacao-destaque">
-
-    <h3>⭐ Avaliação em destaque</h3>
-
-    <div class="feedbacks destaque">
-
-    <img src="{{ asset('imagens/pessoa01.png') }}" id="feedback-avatar">
-
-    <div class="feedback-content">
-    <p>Maria Silva ⭐⭐⭐⭐⭐</p>
-
-    <p>
-    Melhor poke que já comi! Ingredientes frescos e atendimento incrível.
-    </p>
-
-    </div>
-
-    </div>
-    </div>
 
 <!-- seção de avaliações  -->
 <section id="avaliacoes">
@@ -193,11 +190,10 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
                                 </span>
                             </p>
                             <p>
-                                Meu lugar favorito para comer poke! Indico para todos que conheço, nota 10!
+                                Meu lugar favorito para comer poke! O único defeito foi quando pedi ifood e o poke veio todo misturado, mas ir na loja é uma experiência sensacional!
                             </p>
                             <img src="imagens/foto_poke_avaliação.jpg" id="foto-avaliacao" alt="Foto da avaliação do poke">
                         </div>
