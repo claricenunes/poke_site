@@ -4,11 +4,11 @@
 
 @section('content')
 <section id="senha">
-    <h2 class="section-title">
+    <h2 class="sectiontitulo">
         Esqueci minha senha
     </h2>
 
-    <h3 class="section-subtitle">
+    <h3 class="sectionsubtitulo">
         Não se preocupe, vamos te ajudar a recuperar sua senha!
     </h3>
 
