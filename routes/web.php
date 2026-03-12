@@ -7,6 +7,8 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\CardapioController;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\RegisterController as RegisterController;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\SenhaController;
 
 
 
@@ -84,14 +86,51 @@ Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->name('password.request');
 
-// Enviar email com token
-Route::post('/forgot-password', [PasswordController::class, 'sendResetLink'])
-    ->name('password.email');
+Route::post('/enviar-codigo', [SenhaController::class, 'enviarCodigo'])
+    ->name('enviar.codigo');
 
-// Mostrar formulário de nova senha
-Route::get('/reset-password/{token}', [PasswordController::class, 'showResetForm'])
-    ->name('password.reset');
+Route::post('/verificar-codigo',[SenhaController::class,'verificarCodigo'])->name('verificar.codigo');
 
-// Atualizar senha
-Route::post('/reset-password', [PasswordController::class, 'resetPassword'])
-    ->name('password.update');
+Route::get('/nova-senha',function(){
+    return view('nova-senha');
+})->name('nova.senha');
+
+Route::post('/atualizar-senha',[SenhaController::class,'atualizarSenha'])->name('atualizar.senha');
+
+// Route::get('/enviar.codigo/{email}', function ($email) {
+
+//     $codigo = rand(100000, 999999);
+
+//     // salva código e tempo de expiração
+//     session([
+//         'codigo_verificacao' => $codigo,
+//         'codigo_expira_em' => now()->addMinutes(5)
+//     ]);
+
+//     Mail::raw("Seu código de verificação é: $codigo", function ($message) use ($email) {
+//         $message->to($email)
+//                 ->subject('Código de verificação');
+//     });
+
+//     return "Código enviado para $email";
+// });
+
+Route::get('/verificar-codigo/{codigo}', function ($codigoDigitado) {
+
+    $codigo = session('codigo_verificacao');
+    $expiracao = session('codigo_expira_em');
+
+    if (!$codigo || !$expiracao) {
+        return "Nenhum código foi gerado.";
+    }
+
+    if (now()->greaterThan($expiracao)) {
+        return "Código expirado.";
+    }
+
+    if ($codigoDigitado == $codigo) {
+        return "Código correto!";
+    }
+
+    return "Código inválido.";
+});
