@@ -129,7 +129,7 @@ DB_PASSWORD= sua.senha
 
 ## Criando e alimentando as tabelas no Banco de dados
 1. Abra o terminal do VSCode
-2. Digite o código php artisan migration
+2. Digite o código php artisan migrate
 3. Digite o código php artisan db:seed
 
 ## Testando o servidor
